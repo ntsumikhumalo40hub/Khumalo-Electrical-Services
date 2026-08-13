@@ -119,3 +119,7 @@ The website was tested to ensure that:
 - The enquiry form requires users to complete the required fields.
 - A confirmation message is displayed after a successful enquiry submission.
 - The website can be viewed and used on different screen sizes.
+
+## Project Status
+
+Part 1 of the Khumalo Electrical Services website project has been completed. The website includes the required pages, navigation, content, styling, enquiry form functionality, project documentation, and GitHub version control.
