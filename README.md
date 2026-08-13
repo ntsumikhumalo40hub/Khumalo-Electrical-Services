@@ -123,3 +123,47 @@ The website was tested to ensure that:
 ## Project Status
 
 Part 1 of the Khumalo Electrical Services website project has been completed. The website includes the required pages, navigation, content, styling, enquiry form functionality, project documentation, and GitHub version control.
+
+## Instructions
+
+To view the website:
+
+1. Download or clone the project files.
+2. Open the `Khumalo-Electrical-Services` folder.
+3. Open `index.html` in a web browser, or use the Live Server extension in Visual Studio Code.
+
+## Changelog
+
+### Version 1.0
+- Created the initial website structure.
+- Added the Home, About, Services, Enquiry, and Contact pages.
+- Added CSS styling and responsive design.
+- Added JavaScript functionality and form validation.
+- Added images and website content.
+- Created the project README and documentation.
+
+### Version 1.1
+- Added website testing documentation.
+- Updated the README with project completion information.
+
+## Testing
+
+The website was tested to ensure that:
+
+- All navigation links open the correct pages.
+- Images display correctly.
+- The enquiry form requires users to complete the required fields.
+- A confirmation message is displayed after a successful enquiry submission.
+- The website can be viewed and used on different screen sizes.
+
+## Project Status
+
+Part 1 of the Khumalo Electrical Services website project has been completed. The website includes the required pages, navigation, content, styling, enquiry form functionality, project documentation, and GitHub version control.
+
+## Author
+
+Student Name: Omolemo Ntsumi   
+Student Number: ST10459400
+Module: Web Development (Introduction)  
+Module Code: WEDE5020  
+Institution: The Independent Institute of Education
