@@ -109,3 +109,13 @@ Institution: The Independent Institute of Education
 ## Project Information
 
 This website was developed as Part 1 of the Web Development (Introduction) project. The project involves the planning, design, development, and documentation of a website for Khumalo Electrical Services.
+
+## Testing
+
+The website was tested to ensure that:
+
+- All navigation links open the correct pages.
+- Images display correctly.
+- The enquiry form requires users to complete the required fields.
+- A confirmation message is displayed after a successful enquiry submission.
+- The website can be viewed and used on different screen sizes.
