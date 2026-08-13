@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry - Khumalo Electrical Services</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<!-- Website header containing the business name and navigation -->
+    <header>
+        <h1>Khumalo Electrical Services</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+<!-- Main content of the Enquiry page -->
+    <main>
+<!-- Enquiry form allowing users to submit details and service requests -->
+        <section>
+            <h2>Make an Enquiry</h2>
+
+            <p>
+                Complete the form below to enquire about our electrical
+                services.
+            </p>
+
+            <form id="enquiryForm" class="enquiry-form">
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <br><br>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <br><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <br><br>
+
+                <label for="service">Service Required:</label>
+
+                <select id="service" name="service" required>
+                    <option value="">-- Select a Service --</option>
+                    <option value="installation">Electrical Installation</option>
+                    <option value="repair">Electrical Repair</option>
+                    <option value="maintenance">Electrical Maintenance</option>
+                    <option value="lighting">Lighting Upgrade</option>
+                    <option value="emergency">Emergency Call-Out</option>
+                </select>
+
+                <br><br>
+
+                <label for="message">Your Enquiry:</label>
+                <br>
+                <textarea id="message" name="message" rows="6" cols="40" required></textarea>
+
+                <br><br>
+<!-- Submit button and confirmation message for the enquiry form -->
+                <button type="submit">Submit Enquiry</button>
+                <p id="formMessage"></p>
+
+            </form>
+        </section>
+
+    </main>
+<!-- Website footer containing copyright information -->
+    <footer>
+        <p>&copy; 2026 Khumalo Electrical Services. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

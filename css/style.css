@@ -1,0 +1,332 @@
+/* General page styling */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+/* Header */
+
+header {
+    background-color: #1f2933;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 15px;
+}
+
+/* Navigation */
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #1f2933;
+}
+
+h3 {
+    color: #37474f;
+}
+
+/* Services */
+
+article {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #37474f;
+    background-color: #f8f9fa;
+}
+
+/* Forms */
+
+form {
+    max-width: 600px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1f2933;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #37474f;
+}
+
+/* Footer */
+
+footer {
+    background-color: #1f2933;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Responsive navigation */
+
+@media (max-width: 600px) {
+
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+}
+/* Hero section */
+
+.hero {
+    text-align: center;
+    padding: 60px 25px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1f2933;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    .secondary-button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-left: 10px;
+    border: 2px solid #1f2933;
+    color: #1f2933;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.secondary-button:hover {
+    background-color: #1f2933;
+    color: white;
+}
+    background-color: #37474f;
+}
+/* Service cards */
+
+.service-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+/* Information cards */
+
+.info-card {
+    border-left: 5px solid #1f2933;
+}
+
+.info-card h2 {
+    margin-top: 0;
+}
+/* Hero image */
+
+.hero-image {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: 350px;
+    object-fit: cover;
+    margin: 25px auto;
+    border-radius: 8px;
+}
+/* Service images */
+
+.service-image {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    object-fit: cover;
+    margin: 15px auto;
+    border-radius: 8px;
+}
+/* Why choose us section */
+
+.why-us {
+    text-align: center;
+}
+
+.benefits {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.benefit-card {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.benefit-card h3 {
+    margin-top: 0;
+}
+
+@media (max-width: 700px) {
+    .benefits {
+        flex-direction: column;
+    }
+}
+/* Enquiry form */
+
+.enquiry-form {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+    font-family: Arial, sans-serif;
+}
+
+.enquiry-form button {
+    margin-top: 10px;
+}
+/* Contact page */
+
+.contact-intro {
+    text-align: center;
+}
+
+.contact-card {
+    border-left: 5px solid #1f2933;
+}
+
+.contact-card h2 {
+    margin-top: 0;
+}
+/* Mobile responsiveness */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .hero {
+        padding: 35px 15px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        height: 220px;
+    }
+
+    .secondary-button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .service-image {
+        height: 200px;
+    }
+
+    main {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
