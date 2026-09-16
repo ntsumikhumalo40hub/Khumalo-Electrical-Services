@@ -56,6 +56,7 @@ Khumalo-Electrical-Services
 ├── enquiry.html
 ├── contact.html
 └── README.md
+```
 
 ## How to Run the Website
 
