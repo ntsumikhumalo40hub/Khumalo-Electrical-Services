@@ -62,3 +62,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// =========================================
+// CONTACT FORM SUBMISSION
+// =========================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const contactForm = document.getElementById('contactForm');
+    const contactFormMessage = document.getElementById('contactFormMessage');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('contactName').value.trim();
+            const email = document.getElementById('contactEmail').value.trim();
+            const subject = document.getElementById('contactSubject').value;
+            const message = document.getElementById('contactMessage').value.trim();
+            
+            if (!name || !email || !subject || !message) {
+                contactFormMessage.textContent = "Please fill in all required fields.";
+                contactFormMessage.style.color = "red";
+                return;
+            }
+            
+            contactFormMessage.textContent = 
+                "Thank you " + name + "! Your message has been sent. We will get back to you soon.";
+            contactFormMessage.style.color = "green";
+            
+            contactForm.reset();
+        });
+    }
+});
