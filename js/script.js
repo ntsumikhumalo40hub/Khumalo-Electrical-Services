@@ -178,3 +178,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// =========================================
+// SEARCH FUNCTIONALITY FOR SERVICES
+// =========================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const searchInput = document.getElementById('serviceSearch');
+    const searchResults = document.getElementById('searchResults');
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    
+    if (searchInput && accordionItems.length > 0) {
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            let visibleCount = 0;
+            
+            accordionItems.forEach(function(item) {
+                const headerText = item.querySelector('.accordion-header').textContent.toLowerCase();
+                const contentText = item.querySelector('.accordion-content').textContent.toLowerCase();
+                
+                const matches = headerText.includes(searchTerm) || contentText.includes(searchTerm);
+                
+                if (searchTerm === '' || matches) {
+                    item.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+            
+            // Show results message
+            if (searchTerm === '') {
+                searchResults.textContent = '';
+                searchResults.classList.remove('no-results');
+            } else if (visibleCount === 0) {
+                searchResults.textContent = 'No services match your search.';
+                searchResults.classList.add('no-results');
+            } else if (visibleCount === 1) {
+                searchResults.textContent = '1 service found.';
+                searchResults.classList.remove('no-results');
+            } else {
+                searchResults.textContent = visibleCount + ' services found.';
+                searchResults.classList.remove('no-results');
+            }
+        });
+    }
+});

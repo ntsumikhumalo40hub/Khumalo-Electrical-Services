@@ -44,18 +44,22 @@
             </p>
         </section>
 <!-- Service cards describing the electrical solutions offered -->
-        <section class="accordion-section">
+         <section class="accordion-section">
             <h2>Our Services Explained</h2>
             <p>Click on each service to learn more.</p>
 
-            <div class="accordion">
+            <!-- Search box for filtering services -->
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="serviceSearch" 
+                    class="search-input" 
+                    placeholder="Search services... (e.g., repair, emergency)"
+                    aria-label="Search services">
+                <p id="searchResults" class="search-results"></p>
+            </div>
 
-                <div class="accordion-item">
-                    <button class="accordion-header" aria-expanded="false">
-                        <span>Electrical Installations</span>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content">
+            <div class="accordion">
                         <p>
                             We provide professional electrical installation services for homes, 
                             offices, and other commercial properties. Our certified electricians 

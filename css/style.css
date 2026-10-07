@@ -894,3 +894,56 @@ footer p {
         right: 20px;
     }
 }
+/* =========================================
+   SEARCH FUNCTIONALITY
+   ========================================= */
+
+.search-container {
+    margin: 20px 0 25px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border: 2px solid var(--medium-grey);
+    border-radius: var(--radius-md);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 4px rgba(232, 163, 23, 0.15);
+}
+
+.search-input::placeholder {
+    color: var(--dark-grey);
+    font-style: italic;
+}
+
+.search-results {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+    color: var(--dark-grey);
+    min-height: 20px;
+}
+
+.search-results.no-results {
+    color: var(--error);
+    font-weight: 600;
+}
+
+/* Hidden class for filtering */
+.accordion-item.hidden {
+    display: none;
+}
+
+/* Highlight matching text */
+.highlight {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 0 3px;
+    border-radius: 3px;
+    font-weight: 600;
+}
