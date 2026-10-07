@@ -1,19 +1,140 @@
-// JavaScript for handling the enquiry form submission
-const enquiryForm = document.getElementById("enquiryForm");
-const formMessage = document.getElementById("formMessage");
-// Check that the enquiry form exists before adding functionality
-if (enquiryForm) {
-    // Listen for the user submitting the enquiry form
-    enquiryForm.addEventListener("submit", function(event) {
-        // Prevent the form from refreshing the page when submitted
-        event.preventDefault();
-// Display a confirmation message after the form is submitted
-        formMessage.textContent =
-            "Thank you for your enquiry. We will get back to you soon.";
-// Clear all form fields after a successful submission
-        enquiryForm.reset();
-    });
-}
+// =========================================
+// ENQUIRY FORM - AJAX-style submission
+// =========================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const enquiryForm = document.getElementById('enquiryForm');
+    const formMessage = document.getElementById('formMessage');
+    
+    if (enquiryForm && formMessage) {
+        enquiryForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value.trim();
+            
+            // Client-side validation
+            if (!name || !email || !phone || !service || !message) {
+                showFormStatus(formMessage, 'Please fill in all required fields.', 'error');
+                return;
+            }
+            
+            // Email format validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showFormStatus(formMessage, 'Please enter a valid email address.', 'error');
+                return;
+            }
+            
+            // Phone validation (South African format - at least 10 digits)
+            const phoneDigits = phone.replace(/\D/g, '');
+            if (phoneDigits.length < 10) {
+                showFormStatus(formMessage, 'Please enter a valid phone number (at least 10 digits).', 'error');
+                return;
+            }
+            
+            // Get submit button
+            const submitBtn = enquiryForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner"></span>Sending...';
+            showFormStatus(formMessage, 'Sending your enquiry...', 'loading');
+            
+            // Simulate AJAX submission (in real world, this would be a fetch() to a server)
+            setTimeout(function() {
+                // Success state
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                
+                showFormStatus(
+                    formMessage, 
+                    'Thank you ' + name + '! Your enquiry has been received. We will contact you within 24 hours.', 
+                    'success'
+                );
+                
+                // Reset form
+                enquiryForm.reset();
+                
+                // Auto-hide message after 8 seconds
+                setTimeout(function() {
+                    formMessage.classList.remove('show');
+                }, 8000);
+                
+            }, 1500); // Simulate 1.5 second network delay
+        });
+    }
+    
+    // =========================================
+    // CONTACT FORM - AJAX-style submission
+    // =========================================
+    
+    const contactForm = document.getElementById('contactForm');
+    const contactFormMessage = document.getElementById('contactFormMessage');
+    
+    if (contactForm && contactFormMessage) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('contactName').value.trim();
+            const email = document.getElementById('contactEmail').value.trim();
+            const subject = document.getElementById('contactSubject').value;
+            const message = document.getElementById('contactMessage').value.trim();
+            
+            // Validation
+            if (!name || !email || !subject || !message) {
+                showFormStatus(contactFormMessage, 'Please fill in all required fields.', 'error');
+                return;
+            }
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showFormStatus(contactFormMessage, 'Please enter a valid email address.', 'error');
+                return;
+            }
+            
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner"></span>Sending...';
+            showFormStatus(contactFormMessage, 'Sending your message...', 'loading');
+            
+            setTimeout(function() {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                
+                showFormStatus(
+                    contactFormMessage, 
+                    'Thank you ' + name + '! Your message has been sent. We will get back to you soon.', 
+                    'success'
+                );
+                
+                contactForm.reset();
+                
+                setTimeout(function() {
+                    contactFormMessage.classList.remove('show');
+                }, 8000);
+                
+            }, 1500);
+        });
+    }
+    
+    // =========================================
+    // Helper function - show form status
+    // =========================================
+    
+    function showFormStatus(element, message, type) {
+        element.textContent = message;
+        element.className = 'form-status show ' + type;
+    }
+});
 // =========================================
 // HAMBURGER MENU TOGGLE
 // =========================================
@@ -43,24 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // =========================================
     
     const enquiryForm = document.getElementById('enquiryForm');
-    
-    if (enquiryForm) {
-        enquiryForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email')?.value.trim();
-            const message = document.getElementById('message')?.value.trim();
-            
-            if (!name) {
-                alert('Please enter your name.');
-                return;
-            }
-            
-            alert('Thank you ' + name + '! Your enquiry has been received. We will contact you soon.');
-            enquiryForm.reset();
-        });
-    }
+   
 });
 // =========================================
 // CONTACT FORM SUBMISSION
