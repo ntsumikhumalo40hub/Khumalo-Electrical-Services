@@ -195,3 +195,98 @@ The website adapts to three main breakpoints:
 - W3Schools. 2026. *CSS Media Queries*. [Online]. Available at: https://www.w3schools.com/css/css_rwd_mediaqueries.asp [Accessed 16 September 2026].
 - W3Schools. 2026. *CSS Flexbox*. [Online]. Available at: https://www.w3schools.com/css/css3_flexbox.asp [Accessed 16 September 2026].
 - W3Schools. 2026. *CSS Grid*. [Online]. Available at: https://www.w3schools.com/css/css_grid.asp [Accessed 16 September 2026].
+---
+
+## Part 3: Enhancing Functionality and SEO
+
+### Overview
+Part 3 focused on enhancing the website with interactive JavaScript functionality, SEO optimisation, and professional form submission. All features were tested across desktop, tablet, and mobile devices.
+
+### Key Features Implemented
+
+#### SEO Optimisation
+- **Meta descriptions** on all 5 pages — improves search engine ranking
+- **Meta keywords** targeting electrical services in South Africa
+- **Descriptive title tags** for each page
+- **`robots.txt`** — instructs search engines which pages to crawl
+- **`sitemap.xml`** — helps search engines understand the site structure
+
+#### Interactive Elements
+- **Accordion on services page** — click each service to expand and view details
+- **Gallery with lightbox** — click images to view them larger with captions
+- **Search functionality** — live filter for services (e.g., type "repair" to see only repair services)
+- **AJAX-style form submission** — forms submit without page refresh, showing loading states and animated success messages
+
+#### Form Enhancements
+- **Real-time validation** — email format, phone number (min 10 digits), required fields
+- **Loading spinner** — appears while form is submitting
+- **Animated success/error messages** — fade in and auto-hide after 8 seconds
+- **Auto form reset** — clears fields after successful submission
+
+### Technical Improvements
+- Added `robots.txt` and `sitemap.xml` for SEO
+- Enhanced JavaScript with modular functions
+- Added CSS animations for better user experience
+- Improved accessibility with ARIA attributes (`aria-expanded` on accordion buttons)
+
+### Changelog
+
+#### Version 3.0 - Part 3 Implementation (2026-10-07)
+- **Added SEO meta tags** (description, keywords, author) to all 5 HTML pages
+- **Created `robots.txt`** to instruct search engine crawlers
+- **Created `sitemap.xml`** for search engine indexing
+- **Built interactive accordion** on services page with expand/collapse functionality
+- **Created gallery with lightbox** — click images to view larger with captions
+- **Added search functionality** — live filter for services on services page
+- **Implemented AJAX-style form submission** for enquiry and contact forms
+- **Added loading spinner** and animated success/error messages
+- **Enhanced form validation** — email format, phone number length
+- **Auto-hide status messages** after 8 seconds
+- **Added accessibility features** (ARIA attributes on accordion)
+- **Tested all features** on desktop, tablet, and mobile
+
+### Updated File Structure
+
+```text
+Khumalo-Electrical-Services
+│
+├── css
+│   └── style.css
+│
+├── images
+│   ├── electrician.jpg
+│   └── electrical-repair.jpg
+│
+├── js
+│   └── script.js
+│
+├── screenshots
+│   ├── desktop.png
+│   ├── mobile.png
+│   └── tablet.png
+│
+├── index.html
+├── about.html
+├── services.html
+├── enquiry.html
+├── contact.html
+├── robots.txt          ← NEW (Part 3)
+├── sitemap.xml         ← NEW (Part 3)
+└── README.md
+
+### References
+
+**Images:**
+- Electrician image: [Pexels](https://www.pexels.com/) — Free to use stock photo
+- Electrical repair image: [Pexels](https://www.pexels.com/) — Free to use stock photo
+
+**Learning Resources:**
+- MDN Web Docs. 2026. *CSS: Cascading Style Sheets*. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS [Accessed 7 October 2026].
+- MDN Web Docs. 2026. *Responsive Design*. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design [Accessed 7 October 2026].
+- MDN Web Docs. 2026. *Client-side form validation*. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation [Accessed 7 October 2026].
+- W3Schools. 2026. *CSS Media Queries*. [Online]. Available at: https://www.w3schools.com/css/css_rwd_mediaqueries.asp [Accessed 7 October 2026].
+- W3Schools. 2026. *CSS Flexbox*. [Online]. Available at: https://www.w3schools.com/css/css3_flexbox.asp [Accessed 7 October 2026].
+- W3Schools. 2026. *CSS Grid*. [Online]. Available at: https://www.w3schools.com/css/css_grid.asp [Accessed 7 October 2026].
+- W3Schools. 2026. *JavaScript Form Validation*. [Online]. Available at: https://www.w3schools.com/js/js_validation.asp [Accessed 7 October 2026].
+- Google Search Central. 2026. *SEO Starter Guide*. [Online]. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide [Accessed 7 October 2026].
+- Google Search Central. 2026. *robots.txt Specifications*. [Online]. Available at: https://developers.google.com/search/docs/crawling-indexing/robots/intro [Accessed 7 October 2026].
