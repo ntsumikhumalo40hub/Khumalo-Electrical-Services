@@ -1,0 +1,8 @@
+# robots.txt for Khumalo Electrical Services
+# This file tells search engine crawlers which pages to index
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ntsumikhumalo40hub.github.io/Khumalo-Electrical-Services/sitemap.xml
